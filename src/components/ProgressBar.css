@@ -1,0 +1,116 @@
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.progress-text {
+  color: #475569;
+  font-weight: 500;
+}
+
+[data-theme="dark"] .progress-text {
+  color: #cbd5e1;
+}
+
+.progress-percentage {
+  color: #64748b;
+  font-weight: 400;
+}
+
+[data-theme="dark"] .progress-percentage {
+  color: #94a3b8;
+}
+
+.progress-track {
+  height: 8px;
+  background-color: #e2e8f0;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .progress-track {
+  background-color: #334155;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+}
+
+/* Colors */
+.progress-primary .progress-fill {
+  background-color: #2563eb;
+}
+
+[data-theme="dark"] .progress-primary .progress-fill {
+  background-color: #3b82f6;
+}
+
+.progress-success .progress-fill {
+  background-color: #10b981;
+}
+
+[data-theme="dark"] .progress-success .progress-fill {
+  background-color: #34d399;
+}
+
+.progress-warning .progress-fill {
+  background-color: #f59e0b;
+}
+
+[data-theme="dark"] .progress-warning .progress-fill {
+  background-color: #fbbf24;
+}
+
+.progress-error .progress-fill {
+  background-color: #ef4444;
+}
+
+[data-theme="dark"] .progress-error .progress-fill {
+  background-color: #f87171;
+}
+
+/* Sizes */
+.progress-small .progress-track {
+  height: 4px;
+}
+
+.progress-small .progress-label {
+  font-size: 0.75rem;
+}
+
+.progress-medium .progress-track {
+  height: 8px;
+}
+
+.progress-large .progress-track {
+  height: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .progress-label {
+    font-size: 0.8rem;
+  }
+  
+  .progress-small .progress-track {
+    height: 3px;
+  }
+  
+  .progress-medium .progress-track {
+    height: 6px;
+  }
+  
+  .progress-large .progress-track {
+    height: 10px;
+  }
+}

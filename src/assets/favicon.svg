@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Professional "W" shape -->
+  <path 
+    d="M20 70 L35 30 L50 55 L65 30 L80 70" 
+    stroke="#4B0082" 
+    strokeWidth="5" 
+    fill="none" 
+    strokeLinecap="round" 
+    strokeLinejoin="round"
+  />
+  
+  <!-- Professional "U" shape -->
+  <path 
+    d="M85 30 L85 55 Q85 65 90 65 Q95 65 95 55 L95 30" 
+    stroke="#4B0082" 
+    strokeWidth="5" 
+    fill="none" 
+    strokeLinecap="round"
+  />
+  
+  <!-- Professional dot -->
+  <circle 
+    cx="97" 
+    cy="30" 
+    r="3" 
+    fill="#4B0082"
+  />
+</svg>

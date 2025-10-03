@@ -1,0 +1,135 @@
+.social-login {
+  margin: 20px 0;
+}
+
+.social-divider {
+  position: relative;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.social-divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #e2e8f0;
+}
+
+[data-theme="dark"] .social-divider::before {
+  background-color: #334155;
+}
+
+.social-divider span {
+  background-color: white;
+  padding: 0 16px;
+  color: #64748b;
+  font-size: 0.875rem;
+  position: relative;
+  z-index: 1;
+}
+
+[data-theme="dark"] .social-divider span {
+  background-color: #0f172a;
+  color: #94a3b8;
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background-color: white;
+  color: #475569;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+[data-theme="dark"] .social-btn {
+  border: 1px solid #475569;
+  background-color: #1e293b;
+  color: #e2e8f0;
+}
+
+.social-btn:hover:not(:disabled) {
+  border-color: #94a3b8;
+  background-color: #f8fafc;
+  transform: translateY(-1px);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="dark"] .social-btn:hover:not(:disabled) {
+  border-color: #64748b;
+  background-color: #334155;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.social-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.google-btn:hover:not(:disabled) {
+  border-color: #4285F4;
+  background-color: #f0f5ff;
+}
+
+[data-theme="dark"] .google-btn:hover:not(:disabled) {
+  background-color: #1e293b;
+}
+
+.apple-btn:hover:not(:disabled) {
+  border-color: #000;
+  background-color: #f8fafc;
+}
+
+[data-theme="dark"] .apple-btn:hover:not(:disabled) {
+  background-color: #1e293b;
+}
+
+.facebook-btn:hover:not(:disabled) {
+  border-color: #1877F2;
+  background-color: #f0f5ff;
+}
+
+[data-theme="dark"] .facebook-btn:hover:not(:disabled) {
+  background-color: #1e293b;
+}
+
+@media (max-width: 480px) {
+  .social-buttons {
+    gap: 10px;
+  }
+  
+  .social-btn {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+  
+  .social-icon {
+    width: 18px;
+    height: 18px;
+  }
+}

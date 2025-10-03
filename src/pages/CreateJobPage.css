@@ -1,0 +1,133 @@
+.create-job-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+}
+
+.create-job-container {
+  flex: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.access-denied {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+}
+
+.access-denied-content {
+  text-align: center;
+  background: white;
+  padding: 60px 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+.access-denied-content h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 16px 0;
+}
+
+.access-denied-content p {
+  font-size: 16px;
+  color: #666;
+  margin: 0 0 32px 0;
+  line-height: 1.5;
+}
+
+.access-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.back-btn,
+.profile-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  border: none;
+}
+
+.back-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.back-btn:hover {
+  background-color: #5a6268;
+  transform: translateY(-1px);
+}
+
+.profile-btn {
+  background-color: #89F336;
+  color: #000;
+}
+
+.profile-btn:hover {
+  background-color: #7AE02A;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(137, 243, 54, 0.3);
+}
+
+@media (max-width: 768px) {
+  .create-job-container {
+    padding: 20px 15px;
+  }
+  
+  .access-denied-content {
+    padding: 40px 30px;
+  }
+  
+  .access-denied-content h1 {
+    font-size: 24px;
+  }
+  
+  .access-denied-content p {
+    font-size: 14px;
+  }
+  
+  .access-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .back-btn,
+  .profile-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .create-job-container {
+    padding: 15px 10px;
+  }
+  
+  .access-denied {
+    padding: 60px 20px;
+  }
+  
+  .access-denied-content {
+    padding: 30px 20px;
+  }
+  
+  .access-denied-content h1 {
+    font-size: 20px;
+  }
+}
+

@@ -1,0 +1,220 @@
+.chat-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+}
+
+.chat-container {
+  flex: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 24px;
+  height: calc(100vh - 200px);
+  min-height: 600px;
+}
+
+.chat-sidebar {
+  height: 100%;
+}
+
+.chat-main {
+  height: 100%;
+}
+
+.no-chat-selected {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  color: #666;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.no-chat-icon {
+  font-size: 80px;
+  margin-bottom: 24px;
+  opacity: 0.5;
+}
+
+.no-chat-selected h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 12px 0;
+}
+
+.no-chat-selected p {
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.5;
+  max-width: 300px;
+}
+
+.access-denied {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+}
+
+.access-denied-content {
+  text-align: center;
+  background: white;
+  padding: 60px 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.access-denied-content h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 16px 0;
+}
+
+.access-denied-content p {
+  font-size: 16px;
+  color: #666;
+  margin: 0 0 32px 0;
+  line-height: 1.5;
+}
+
+.login-btn {
+  background-color: #89F336;
+  color: #000;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.login-btn:hover {
+  background-color: #7AE02A;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(137, 243, 54, 0.3);
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .chat-container {
+    grid-template-columns: 300px 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 968px) {
+  .chat-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    height: auto;
+    min-height: calc(100vh - 200px);
+  }
+  
+  .chat-sidebar {
+    height: 300px;
+  }
+  
+  .chat-main {
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .chat-container {
+    padding: 20px 15px;
+    gap: 16px;
+  }
+  
+  .chat-sidebar {
+    height: 250px;
+  }
+  
+  .chat-main {
+    height: 400px;
+  }
+  
+  .no-chat-selected {
+    padding: 30px 20px;
+  }
+  
+  .no-chat-icon {
+    font-size: 60px;
+  }
+  
+  .no-chat-selected h2 {
+    font-size: 20px;
+  }
+  
+  .no-chat-selected p {
+    font-size: 14px;
+  }
+  
+  .access-denied-content {
+    padding: 40px 30px;
+  }
+  
+  .access-denied-content h1 {
+    font-size: 20px;
+  }
+  
+  .access-denied-content p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chat-container {
+    padding: 15px 10px;
+    gap: 12px;
+  }
+  
+  .chat-sidebar {
+    height: 200px;
+  }
+  
+  .chat-main {
+    height: 350px;
+  }
+  
+  .no-chat-selected {
+    padding: 20px 15px;
+  }
+  
+  .no-chat-icon {
+    font-size: 48px;
+  }
+  
+  .no-chat-selected h2 {
+    font-size: 18px;
+  }
+  
+  .access-denied {
+    padding: 60px 20px;
+  }
+  
+  .access-denied-content {
+    padding: 30px 20px;
+  }
+  
+  .access-denied-content h1 {
+    font-size: 18px;
+  }
+}
+

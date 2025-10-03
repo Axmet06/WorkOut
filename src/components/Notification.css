@@ -1,0 +1,214 @@
+.notification {
+  position: relative;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  animation: notification-enter 0.3s ease-out;
+  max-width: 400px;
+  width: 100%;
+}
+
+[data-theme="dark"] .notification {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes notification-enter {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.notification-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.notification-icon {
+  font-size: 1.25rem;
+  font-weight: 600;
+  min-width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-message {
+  flex: 1;
+}
+
+.notification-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+}
+
+.notification-description {
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.notification-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  align-self: flex-start;
+}
+
+.notification-close:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Variants */
+.notification-success {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #14532d;
+}
+
+[data-theme="dark"] .notification-success {
+  background-color: #052e16;
+  border: 1px solid #166534;
+  color: #dcfce7;
+}
+
+.notification-success .notification-icon {
+  color: #16a34a;
+}
+
+[data-theme="dark"] .notification-success .notification-icon {
+  color: #4ade80;
+}
+
+.notification-success .notification-close:hover {
+  background-color: #dcfce7;
+}
+
+[data-theme="dark"] .notification-success .notification-close:hover {
+  background-color: #166534;
+}
+
+.notification-error {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #7f1d1d;
+}
+
+[data-theme="dark"] .notification-error {
+  background-color: #450a0a;
+  border: 1px solid #7f1d1d;
+  color: #fecaca;
+}
+
+.notification-error .notification-icon {
+  color: #dc2626;
+}
+
+[data-theme="dark"] .notification-error .notification-icon {
+  color: #f87171;
+}
+
+.notification-error .notification-close:hover {
+  background-color: #fee2e2;
+}
+
+[data-theme="dark"] .notification-error .notification-close:hover {
+  background-color: #7f1d1d;
+}
+
+.notification-warning {
+  background-color: #fffbeb;
+  border: 1px solid #fde68a;
+  color: #713f12;
+}
+
+[data-theme="dark"] .notification-warning {
+  background-color: #451a03;
+  border: 1px solid #92400e;
+  color: #fef3c7;
+}
+
+.notification-warning .notification-icon {
+  color: #d97706;
+}
+
+[data-theme="dark"] .notification-warning .notification-icon {
+  color: #fbbf24;
+}
+
+.notification-warning .notification-close:hover {
+  background-color: #fef3c7;
+}
+
+[data-theme="dark"] .notification-warning .notification-close:hover {
+  background-color: #92400e;
+}
+
+.notification-info {
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #1e3a8a;
+}
+
+[data-theme="dark"] .notification-info {
+  background-color: #172554;
+  border: 1px solid #3b82f6;
+  color: #dbeafe;
+}
+
+.notification-info .notification-icon {
+  color: #2563eb;
+}
+
+[data-theme="dark"] .notification-info .notification-icon {
+  color: #60a5fa;
+}
+
+.notification-info .notification-close:hover {
+  background-color: #dbeafe;
+}
+
+[data-theme="dark"] .notification-info .notification-close:hover {
+  background-color: #1e40af;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .notification {
+    padding: 12px;
+    max-width: 300px;
+  }
+  
+  .notification-content {
+    gap: 10px;
+  }
+  
+  .notification-icon {
+    font-size: 1.1rem;
+    min-width: 20px;
+  }
+  
+  .notification-title {
+    font-size: 0.95rem;
+  }
+  
+  .notification-description {
+    font-size: 0.9rem;
+  }
+}

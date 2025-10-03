@@ -1,0 +1,60 @@
+.confirmation-dialog {
+  /* Inherits styles from Modal */
+}
+
+.confirmation-dialog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.confirmation-dialog-message {
+  font-size: 1rem;
+  color: #475569;
+  margin: 0;
+  line-height: 1.6;
+}
+
+[data-theme="dark"] .confirmation-dialog-message {
+  color: #cbd5e1;
+}
+
+.confirmation-dialog-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .confirmation-dialog-content {
+    gap: 20px;
+  }
+  
+  .confirmation-dialog-message {
+    font-size: 0.95rem;
+  }
+  
+  .confirmation-dialog-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .confirmation-dialog-actions button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .confirmation-dialog-content {
+    gap: 16px;
+  }
+  
+  .confirmation-dialog-message {
+    font-size: 0.9rem;
+  }
+  
+  .confirmation-dialog-actions {
+    gap: 8px;
+  }
+}

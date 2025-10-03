@@ -1,0 +1,164 @@
+.cta {
+  padding: 48px 24px;
+  border-radius: 12px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-content {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.cta-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  line-height: 1.2;
+}
+
+[data-theme="dark"] .cta-title {
+  color: #f1f5f9;
+}
+
+.cta-description {
+  font-size: 1.1rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.6;
+}
+
+[data-theme="dark"] .cta-description {
+  color: #94a3b8;
+}
+
+
+
+.cta-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cta-button {
+  min-width: 180px;
+}
+
+/* Variants */
+.cta-default {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+[data-theme="dark"] .cta-default {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+}
+
+.cta-primary {
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  color: white;
+}
+
+[data-theme="dark"] .cta-primary {
+  background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+}
+
+.cta-secondary {
+  background-color: #1e293b;
+  color: white;
+}
+
+[data-theme="dark"] .cta-secondary {
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .cta {
+    padding: 40px 20px;
+  }
+  
+  .cta-content {
+    gap: 20px;
+  }
+  
+  .cta-title {
+    font-size: 1.75rem;
+  }
+  
+  .cta-description {
+    font-size: 1rem;
+  }
+  
+
+  
+  .cta-actions {
+    gap: 12px;
+  }
+  
+  .cta-button {
+    min-width: 160px;
+    padding: 14px 24px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta {
+    padding: 32px 16px;
+  }
+  
+  .cta-content {
+    gap: 16px;
+  }
+  
+  .cta-title {
+    font-size: 1.5rem;
+  }
+  
+  .cta-description {
+    font-size: 0.95rem;
+  }
+  
+
+  
+  .cta-actions {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+  
+  .cta-button {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta {
+    padding: 24px 12px;
+  }
+  
+  .cta-content {
+    gap: 14px;
+  }
+  
+  .cta-title {
+    font-size: 1.25rem;
+  }
+  
+  .cta-description {
+    font-size: 0.9rem;
+  }
+  
+
+}

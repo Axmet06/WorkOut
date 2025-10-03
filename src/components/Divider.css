@@ -1,0 +1,116 @@
+.divider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Horizontal divider */
+.divider-horizontal {
+  flex-direction: row;
+}
+
+.divider-horizontal .divider-line {
+  flex: 1;
+  height: 1px;
+  background-color: #e2e8f0;
+}
+
+[data-theme="dark"] .divider-horizontal .divider-line {
+  background-color: #334155;
+}
+
+/* Vertical divider */
+.divider-vertical {
+  flex-direction: column;
+  height: 100%;
+}
+
+.divider-vertical .divider-line {
+  width: 1px;
+  flex: 1;
+  background-color: #e2e8f0;
+}
+
+[data-theme="dark"] .divider-vertical .divider-line {
+  background-color: #334155;
+}
+
+/* Variants */
+.divider-solid .divider-line {
+  border-style: solid;
+}
+
+.divider-dashed .divider-line {
+  border-style: dashed;
+}
+
+.divider-dotted .divider-line {
+  border-style: dotted;
+}
+
+/* Thickness */
+.divider-thin .divider-line {
+  border-width: 1px;
+}
+
+.divider-medium .divider-line {
+  border-width: 2px;
+}
+
+.divider-thick .divider-line {
+  border-width: 3px;
+}
+
+/* Colors */
+.divider-default .divider-line {
+  border-color: #e2e8f0;
+}
+
+[data-theme="dark"] .divider-default .divider-line {
+  border-color: #334155;
+}
+
+.divider-primary .divider-line {
+  border-color: #2563eb;
+}
+
+[data-theme="dark"] .divider-primary .divider-line {
+  border-color: #3b82f6;
+}
+
+.divider-secondary .divider-line {
+  border-color: #64748b;
+}
+
+[data-theme="dark"] .divider-secondary .divider-line {
+  border-color: #94a3b8;
+}
+
+/* With content */
+.divider-content {
+  padding: 0 16px;
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+[data-theme="dark"] .divider-content {
+  color: #94a3b8;
+}
+
+.divider-line-before {
+  margin-right: 0;
+}
+
+.divider-line-after {
+  margin-left: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .divider-content {
+    padding: 0 12px;
+    font-size: 0.8rem;
+  }
+}

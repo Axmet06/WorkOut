@@ -1,0 +1,201 @@
+.stepper {
+  display: flex;
+  width: 100%;
+}
+
+/* Horizontal Stepper */
+.stepper-horizontal {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.stepper-step {
+  display: flex;
+  flex: 1;
+  position: relative;
+  min-width: 0;
+}
+
+.stepper-step-marker {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.stepper-step-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepper-step-number {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.stepper-step-content {
+  flex: 1;
+  padding-right: 24px;
+  min-width: 0;
+}
+
+.stepper-step-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.stepper-step-description {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.4;
+}
+
+[data-theme="dark"] .stepper-step-description {
+  color: #94a3b8;
+}
+
+.stepper-step-connector {
+  position: absolute;
+  top: 20px;
+  left: 60px;
+  right: -20px;
+  height: 2px;
+  background-color: #e2e8f0;
+  z-index: 1;
+}
+
+[data-theme="dark"] .stepper-step-connector {
+  background-color: #334155;
+}
+
+/* Status variants */
+.stepper-step-completed .stepper-step-marker {
+  background-color: #10b981;
+  color: white;
+}
+
+[data-theme="dark"] .stepper-step-completed .stepper-step-marker {
+  background-color: #34d399;
+}
+
+.stepper-step-current .stepper-step-marker {
+  background-color: #2563eb;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2), 0 2px 4px -1px rgba(37, 99, 235, 0.1);
+}
+
+[data-theme="dark"] .stepper-step-current .stepper-step-marker {
+  background-color: #3b82f6;
+  box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.2), 0 2px 4px -1px rgba(59, 130, 246, 0.1);
+}
+
+.stepper-step-pending .stepper-step-marker {
+  background-color: #f1f5f9;
+  color: #94a3b8;
+  border: 2px solid #e2e8f0;
+}
+
+[data-theme="dark"] .stepper-step-pending .stepper-step-marker {
+  background-color: #334155;
+  color: #64748b;
+  border: 2px solid #475569;
+}
+
+/* Vertical Stepper */
+.stepper-vertical {
+  flex-direction: column;
+  gap: 24px;
+}
+
+.stepper-vertical .stepper-step {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.stepper-vertical .stepper-step-content {
+  padding-right: 0;
+  padding-bottom: 24px;
+}
+
+.stepper-vertical .stepper-step-connector {
+  top: 40px;
+  left: 20px;
+  right: auto;
+  bottom: -20px;
+  width: 2px;
+  height: auto;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .stepper-horizontal {
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .stepper-horizontal .stepper-step {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .stepper-horizontal .stepper-step-content {
+    padding-right: 0;
+    padding-bottom: 24px;
+  }
+  
+  .stepper-horizontal .stepper-step-connector {
+    top: 40px;
+    left: 20px;
+    right: auto;
+    bottom: -20px;
+    width: 2px;
+    height: auto;
+  }
+  
+  .stepper-step-title {
+    font-size: 0.95rem;
+  }
+  
+  .stepper-step-description {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .stepper-step-marker {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .stepper-step-number {
+    font-size: 1rem;
+  }
+  
+  .stepper-step-title {
+    font-size: 0.9rem;
+  }
+  
+  .stepper-step-description {
+    font-size: 0.75rem;
+  }
+  
+  .stepper-vertical .stepper-step-connector {
+    top: 36px;
+    left: 18px;
+  }
+}

@@ -1,0 +1,141 @@
+.testimonial {
+  background-color: white;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.2s ease;
+}
+
+[data-theme="dark"] .testimonial {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] .testimonial:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-header {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.testimonial-avatar {
+  flex-shrink: 0;
+}
+
+.testimonial-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.testimonial-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+[data-theme="dark"] .testimonial-name {
+  color: #f1f5f9;
+}
+
+.testimonial-position {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+[data-theme="dark"] .testimonial-position {
+  color: #94a3b8;
+}
+
+.testimonial-rating {
+  margin-top: 4px;
+}
+
+.testimonial-content {
+  flex: 1;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+  font-style: italic;
+}
+
+[data-theme="dark"] .testimonial-text {
+  color: #cbd5e1;
+}
+
+.testimonial-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.testimonial-date {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .testimonial-date {
+  color: #64748b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonial {
+    padding: 20px;
+    gap: 14px;
+  }
+  
+  .testimonial-header {
+    gap: 12px;
+  }
+  
+  .testimonial-name {
+    font-size: 1rem;
+  }
+  
+  .testimonial-position {
+    font-size: 0.85rem;
+  }
+  
+  .testimonial-text {
+    font-size: 0.95rem;
+  }
+  
+  .testimonial-date {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial {
+    padding: 16px;
+    gap: 12px;
+  }
+  
+  .testimonial-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .testimonial-text {
+    font-size: 0.9rem;
+  }
+}

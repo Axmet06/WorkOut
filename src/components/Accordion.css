@@ -1,0 +1,128 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.accordion-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+[data-theme="dark"] .accordion-item {
+  border: 1px solid #334155;
+  background-color: #1e293b;
+}
+
+.accordion-item-open {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="dark"] .accordion-item-open {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 20px;
+  background-color: #f8fafc;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-align: left;
+}
+
+[data-theme="dark"] .accordion-header {
+  background-color: #334155;
+}
+
+.accordion-header:hover {
+  background-color: #f1f5f9;
+}
+
+[data-theme="dark"] .accordion-header:hover {
+  background-color: #475569;
+}
+
+.accordion-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+[data-theme="dark"] .accordion-title {
+  color: #f1f5f9;
+}
+
+.accordion-icon {
+  color: #64748b;
+  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[data-theme="dark"] .accordion-icon {
+  color: #94a3b8;
+}
+
+.accordion-item-open .accordion-icon {
+  transform: rotate(45deg);
+}
+
+.accordion-content {
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-panel {
+  padding: 0 20px 20px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+[data-theme="dark"] .accordion-panel {
+  color: #cbd5e1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .accordion-header {
+    padding: 14px 16px;
+  }
+  
+  .accordion-title {
+    font-size: 0.95rem;
+  }
+  
+  .accordion-panel {
+    padding: 0 16px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .accordion {
+    gap: 6px;
+  }
+  
+  .accordion-header {
+    padding: 12px 14px;
+  }
+  
+  .accordion-title {
+    font-size: 0.9rem;
+  }
+  
+  .accordion-panel {
+    padding: 0 14px 14px;
+    font-size: 0.85rem;
+  }
+}

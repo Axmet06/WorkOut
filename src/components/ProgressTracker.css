@@ -1,0 +1,267 @@
+.progress-tracker {
+  display: flex;
+  width: 100%;
+}
+
+/* Horizontal Progress Tracker */
+.progress-tracker-horizontal {
+  flex-direction: row;
+}
+
+.progress-step {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+.progress-step-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+.progress-step-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  position: relative;
+}
+
+.progress-step-line {
+  width: 2px;
+  flex: 1;
+  margin-top: 8px;
+}
+
+.progress-step-content {
+  flex: 1;
+  padding-bottom: 32px;
+}
+
+.progress-step-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.progress-step-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+[data-theme="dark"] .progress-step-title {
+  color: #f1f5f9;
+}
+
+.progress-step-status {
+  font-size: 0.8rem;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.progress-step-description {
+  color: #64748b;
+  font-size: 0.875rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+[data-theme="dark"] .progress-step-description {
+  color: #94a3b8;
+}
+
+/* Status variants */
+.progress-step-completed .progress-step-icon {
+  background-color: #10b981;
+  color: white;
+}
+
+[data-theme="dark"] .progress-step-completed .progress-step-icon {
+  background-color: #34d399;
+}
+
+.progress-step-completed .progress-step-line {
+  background-color: #10b981;
+}
+
+[data-theme="dark"] .progress-step-completed .progress-step-line {
+  background-color: #34d399;
+}
+
+.progress-step-active .progress-step-icon {
+  background-color: #2563eb;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2), 0 2px 4px -1px rgba(37, 99, 235, 0.1);
+}
+
+[data-theme="dark"] .progress-step-active .progress-step-icon {
+  background-color: #3b82f6;
+  box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.2), 0 2px 4px -1px rgba(59, 130, 246, 0.1);
+}
+
+.progress-step-active .progress-step-line {
+  background-color: #2563eb;
+}
+
+[data-theme="dark"] .progress-step-active .progress-step-line {
+  background-color: #3b82f6;
+}
+
+.progress-step-pending .progress-step-icon {
+  background-color: #f1f5f9;
+  color: #94a3b8;
+  border: 2px solid #e2e8f0;
+}
+
+[data-theme="dark"] .progress-step-pending .progress-step-icon {
+  background-color: #334155;
+  color: #64748b;
+  border: 2px solid #475569;
+}
+
+.progress-step-pending .progress-step-line {
+  background-color: #e2e8f0;
+}
+
+[data-theme="dark"] .progress-step-pending .progress-step-line {
+  background-color: #334155;
+}
+
+.progress-step-completed .progress-step-status {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+[data-theme="dark"] .progress-step-completed .progress-step-status {
+  background-color: #14532d;
+  color: #bbf7d0;
+}
+
+.progress-step-active .progress-step-status {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+[data-theme="dark"] .progress-step-active .progress-step-status {
+  background-color: #1e3a8a;
+  color: #bfdbfe;
+}
+
+.progress-step-pending .progress-step-status {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+[data-theme="dark"] .progress-step-pending .progress-step-status {
+  background-color: #374151;
+  color: #e5e7eb;
+}
+
+/* Vertical Progress Tracker */
+.progress-tracker-vertical {
+  flex-direction: column;
+  gap: 24px;
+}
+
+.progress-tracker-vertical .progress-step {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.progress-tracker-vertical .progress-step-marker {
+  flex-direction: row;
+  margin-right: 0;
+  margin-bottom: 16px;
+}
+
+.progress-tracker-vertical .progress-step-line {
+  height: 2px;
+  width: 100%;
+  margin-top: 0;
+  margin-left: 16px;
+}
+
+.progress-tracker-vertical .progress-step-content {
+  padding-bottom: 0;
+  padding-left: 32px;
+}
+
+.progress-tracker-vertical .progress-step-header {
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .progress-tracker-horizontal {
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .progress-tracker-horizontal .progress-step {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .progress-tracker-horizontal .progress-step-marker {
+    flex-direction: column;
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+  
+  .progress-tracker-horizontal .progress-step-line {
+    height: 2px;
+    width: 100%;
+    margin-top: 0;
+    margin-left: 16px;
+  }
+  
+  .progress-tracker-horizontal .progress-step-content {
+    padding-bottom: 0;
+    padding-left: 32px;
+  }
+  
+  .progress-tracker-horizontal .progress-step-header {
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .progress-step-marker {
+    margin-right: 12px;
+  }
+  
+  .progress-step-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 1rem;
+  }
+  
+  .progress-step-content {
+    padding-bottom: 24px;
+  }
+  
+  .progress-step-title {
+    font-size: 0.95rem;
+  }
+  
+  .progress-step-description {
+    font-size: 0.8rem;
+  }
+}

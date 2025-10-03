@@ -1,0 +1,247 @@
+.newsletter-signup {
+  background-color: white;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  padding: 32px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+[data-theme="dark"] .newsletter-signup {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.newsletter-signup-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.newsletter-signup-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+[data-theme="dark"] .newsletter-signup-title {
+  color: #f1f5f9;
+}
+
+.newsletter-signup-description {
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+[data-theme="dark"] .newsletter-signup-description {
+  color: #94a3b8;
+}
+
+.newsletter-signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.newsletter-signup-input-group {
+  display: flex;
+  gap: 12px;
+}
+
+.newsletter-signup-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: white;
+  color: #1e293b;
+  transition: all 0.2s ease;
+}
+
+[data-theme="dark"] .newsletter-signup-input {
+  border: 1px solid #475569;
+  background-color: #1e293b;
+  color: #e2e8f0;
+}
+
+.newsletter-signup-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+[data-theme="dark"] .newsletter-signup-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.newsletter-signup-input-error {
+  border-color: #ef4444;
+}
+
+.newsletter-signup-input-error:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+[data-theme="dark"] .newsletter-signup-input-error:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+.newsletter-signup-button {
+  white-space: nowrap;
+}
+
+.newsletter-signup-error {
+  color: #ef4444;
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+/* Success state */
+.newsletter-signup-success {
+  text-align: center;
+  align-items: center;
+  padding: 40px 32px;
+}
+
+.newsletter-signup-success-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #10b981;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.newsletter-signup-success-icon svg {
+  width: 48px;
+  height: 48px;
+  stroke: white;
+}
+
+.newsletter-signup-success-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 12px 0;
+}
+
+[data-theme="dark"] .newsletter-signup-success-title {
+  color: #f1f5f9;
+}
+
+.newsletter-signup-success-message {
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+[data-theme="dark"] .newsletter-signup-success-message {
+  color: #94a3b8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .newsletter-signup {
+    padding: 28px;
+  }
+  
+  .newsletter-signup-title {
+    font-size: 1.25rem;
+  }
+  
+  .newsletter-signup-description {
+    font-size: 0.95rem;
+  }
+  
+  .newsletter-signup-input-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .newsletter-signup-input {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+  
+  .newsletter-signup-button {
+    width: 100%;
+  }
+  
+  .newsletter-signup-success {
+    padding: 32px 28px;
+  }
+  
+  .newsletter-signup-success-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+  }
+  
+  .newsletter-signup-success-title {
+    font-size: 1.25rem;
+  }
+  
+  .newsletter-signup-success-message {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsletter-signup {
+    padding: 24px;
+  }
+  
+  .newsletter-signup-content {
+    gap: 16px;
+  }
+  
+  .newsletter-signup-title {
+    font-size: 1.1rem;
+  }
+  
+  .newsletter-signup-description {
+    font-size: 0.9rem;
+  }
+  
+  .newsletter-signup-input {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .newsletter-signup-error {
+    font-size: 0.8rem;
+  }
+  
+  .newsletter-signup-success {
+    padding: 28px 24px;
+  }
+  
+  .newsletter-signup-success-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+  }
+  
+  .newsletter-signup-success-title {
+    font-size: 1.1rem;
+  }
+  
+  .newsletter-signup-success-message {
+    font-size: 0.9rem;
+  }
+}
